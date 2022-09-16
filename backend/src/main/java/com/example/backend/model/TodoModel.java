@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class TodoModel {
 
-    private int id;
-    private String task;
+    private String id;
+    private String status;
+    private String description;
 }
