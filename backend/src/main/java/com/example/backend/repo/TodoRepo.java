@@ -20,4 +20,9 @@ public class TodoRepo {
     public List<TodoModel> getAllTodos() {
         return new ArrayList<TodoModel>(todos.values());
     }
+
+    public TodoModel postNewTodo(TodoModel todo) {
+        todos.put(todo.getId(), todo);
+        return todo;
+    }
 }

@@ -20,4 +20,8 @@ public class TodoService {
     public List<TodoModel> getAllTodos() {
         return repo.getAllTodos();
     }
+
+    public TodoModel addTodo(TodoModel todo) {
+        return repo.postNewTodo(todo);
+    }
 }
