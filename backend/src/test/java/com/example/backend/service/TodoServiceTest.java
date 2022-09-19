@@ -4,6 +4,10 @@ import com.example.backend.model.TodoList;
 import com.example.backend.model.TodoModel;
 import com.example.backend.repo.TodoRepo;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.HashMap;
 import java.util.List;
@@ -13,7 +17,12 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
+@SpringBootTest
+@AutoConfigureMockMvc
 class TodoServiceTest {
+
+    @Autowired
+    private MockMvc mockMvc;
 
     TodoRepo repo = mock(TodoRepo.class);
     TodoService service = new TodoService(repo);
