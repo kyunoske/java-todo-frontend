@@ -25,4 +25,22 @@ public class TodoRepo {
         todos.put(todo.getId(), todo);
         return todo;
     }
+
+    public TodoModel getTodoById(String id) {
+        return todos.get(id);
+    }
+
+    public Map<String, TodoModel> getTodos() {
+        return todos;
+    }
+
+    public TodoModel editTodo(TodoModel todo) {
+        todos.get(todo.getId()).setStatus(todo.getStatus());
+        todos.get(todo.getId()).setDescription(todo.getDescription());
+        return todos.get(todo.getId());
+    }
+
+    public TodoModel deleteTodo(String id) {
+        return todos.remove(id);
+    }
 }
