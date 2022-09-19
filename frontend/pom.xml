@@ -11,8 +11,8 @@
     <groupId>com.example</groupId>
     <artifactId>java-todo-frontend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>backend</name>
-    <description>backend</description>
+    <name>java-todo-frontend</name>
+    <description>java-todo-frontend</description>
     <properties>
         <java.version>18</java.version>
     </properties>
