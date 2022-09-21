@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>java-todo-frontend</artifactId>
+    <artifactId>backend/pom.xml</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>java-todo-frontend</name>
-    <description>java-todo-frontend</description>
+    <name>backend</name>
+    <description>backend</description>
     <properties>
         <java.version>18</java.version>
     </properties>
