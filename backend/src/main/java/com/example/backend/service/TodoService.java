@@ -39,12 +39,8 @@ public class TodoService {
         return repo.getTodoById(id);
     }
 
-    public TodoModel editTodo(String id, TodoModel todo) {
-        Map<String, TodoModel> presentTodos = repo.getTodos();
-        TodoModel updateTodo = presentTodos.get(id);
-        updateTodo.setStatus(todo.getStatus());
-        updateTodo.setDescription(todo.getDescription());
-        return repo.editTodo(updateTodo);
+    public TodoModel editTodo(TodoModel todo) {
+        return repo.editTodo(todo);
     }
 
     public TodoModel deleteTodo(String id) {

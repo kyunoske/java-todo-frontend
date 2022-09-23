@@ -1,6 +1,5 @@
 package com.example.backend.service;
 
-import com.example.backend.model.TodoList;
 import com.example.backend.model.TodoModel;
 import com.example.backend.repo.TodoRepo;
 import org.junit.jupiter.api.Test;
@@ -10,9 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;

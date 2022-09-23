@@ -14,7 +14,6 @@ import java.util.Map;
 public class TodoController {
 
     private TodoService service;
-    private TodoRepo repo;
 
     public TodoController(TodoService service) {
         this.service = service;
@@ -37,7 +36,7 @@ public class TodoController {
 
     @PutMapping("{id}")
     public TodoModel editTodo(@PathVariable String id, @RequestBody TodoModel todoDetails) {
-        return service.editTodo(id, todoDetails);
+        return service.editTodo(todoDetails);
     }
 
     @DeleteMapping("{id}")
