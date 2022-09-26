@@ -4,18 +4,20 @@ import TodoItem from "./TodoItem";
 
 type TodoListProps = {
     todos: TodoModel[]
+    deleteTodo: (id: string) => void;
 }
 
 function TodoList(props: TodoListProps) {
+
     return (
         <div>
-            {props.todos.map((todo, index) => {
-                return <TodoItem
-                    key={index}
-                    description={todo.description}
-                    status={todo.status}
+            {props.todos.map((todo, index) =>
+                 <TodoItem
+                     key={index}
+                    todo={todo}
+                    deleteTodo={props.deleteTodo}
                 />
-            })}
+            )}
         </div>
     );
 }

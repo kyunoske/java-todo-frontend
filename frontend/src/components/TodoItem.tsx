@@ -2,15 +2,20 @@ import React from 'react';
 import "./TodoItem.css";
 import {TodoModel} from "../models/TodoModel";
 
-function TodoItem(props: TodoModel) {
+type TodoItemProps = {
+    todo: TodoModel;
+    deleteTodo: (id: string) => void;
+}
+
+function TodoItem(props: TodoItemProps) {
+
     return (
+
         <div className="todo-container">
-            <h3>{props.description}</h3>
+            <h3>{props.todo.description}</h3>
             <div className="todo-options">
-                <p>details</p>
-                <p>onAdvance</p>
-                <p>onDelete</p>
             </div>
+            <button onClick={() => props.deleteTodo(props.todo.id)}>delete</button>
         </div>
     );
 }
